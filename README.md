@@ -290,7 +290,7 @@ In this section, I will analyze how the final model performs differently across 
 **Alternative hypothesis**: The model is unfair, that is, there is a difference in accuracy between the two groups. Our test statistic is the difference in accuracy between the two groups.
 
 <iframe 
-  src="assets/dragons_result.html"
+  src="assets/accuracy_perm.html"
   width="800" 
   height="600"
   frameborder="0">
