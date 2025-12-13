@@ -296,4 +296,4 @@ In this section, I will analyze how the final model performs differently across 
   frameborder="0">
 </iframe>
 
-After completing the permutation test, I received a p-value greater than 0.05. Thus, we fail to reject the null hypothesis. This shows no strong statistical evidence of a difference in the model's predictive accuracy between teams with and without an opening monetary advantage. Based on this analysis, the model appears to be fair under this grouping standard.
+After completing the permutation test, I received a p-value = **0.7142**， it is greater than 0.05. Thus, we fail to reject the null hypothesis. This shows no strong statistical evidence of a difference in the model's predictive accuracy between teams with and without an opening monetary advantage. Based on this analysis, the model appears to be fair under this grouping standard.
