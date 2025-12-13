@@ -91,7 +91,7 @@ This reflects dragons as a structured and constrained game objective. Extreme va
 This box plot compares the distribution of dragon control between winning and losing teams. On average, winning teams tend to secure more dragons, with a higher median and greater upper range, while losing teams cluster around lower dragon counts. This shows dragon control is closely linked to match success.
 
 <iframe 
-  src="assets/dragon_diff_by_result_box.html"
+  src="assets/dragon_diff_result.html"
   width="100%" 
   height="550px"
   style="border:none;">
