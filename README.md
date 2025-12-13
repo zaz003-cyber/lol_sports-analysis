@@ -176,3 +176,21 @@ In this hypothesis test, I am analyzing whether there is a significant differenc
   height="560px" 
   style="border:none;">
 </iframe>
+
+1111
+
+## Framing a Prediction Problem
+
+11111
+
+## Baseline Model
+
+111111
+
+## Final Model
+
+111111
+
+## Fairness Analysis
+
+11111111
