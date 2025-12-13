@@ -1,22 +1,23 @@
 <html>
 <head>
   <meta charset="utf-8" />
-</head>
-
-<body>
+  <title>Permutation Distribution of Difference in Means</title>
 
   <script type="text/javascript">
     window.PlotlyConfig = { MathJaxConfig: 'local' };
   </script>
 
   <script charset="utf-8" src="https://cdn.plot.ly/plotly-2.26.0.min.js"></script>
-
   <script src="../perm_stats_dragon_diff.js"></script>
+</head>
 
-  <div id="plot" style="height:100%; width:100%;"></div>
+<body>
+
+  <div id="plot" style="height:520px; width:100%;"></div>
 
   <script type="text/javascript">
     const obs = 3.2475027746947383;
+
     const trace = {
       type: "histogram",
       x: permStats,
@@ -24,7 +25,6 @@
       marker: { color: "#636efa" },
       showlegend: false
     };
-
     const layout = {
       title: "Permutation Distribution of Difference in Means",
       xaxis: { title: "Difference in Means" },
@@ -49,7 +49,5 @@
     Plotly.newPlot("plot", [trace], layout, { responsive: true });
   </script>
 
-</body>
-</html>
 </body>
 </html>
