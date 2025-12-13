@@ -129,6 +129,7 @@ I analyzed whether the missingness of the variable `golddiffat15` depends on oth
 I first tested whether the absence of `golddiffat15` data depended on `result`, then analyzed its correlation with the number of `barons` secured. These tests allowed me to assess whether the absence of `golddiffat15` data was associated with outcomes observed within the game or with objective control factors.
 
 **Null Hypothesis**: The missingness of `golddiffat15` is independent of match `result`.
+
 **Alternative Hypothesis**: The missingness of `golddiffat15` depends on match `result`.
 
 After performing the permutation test, I found the observed test statistic to be 0.0000 with a p-value of 1.0000. The graph below shows the empirical distribution of the test statistic under the null hypothesis, with the observed statistic marked by the red vertical line.
@@ -144,6 +145,7 @@ The observed test statistic is 0.0000, with a p-value of 1.0000. This observed s
 
 
 **Null Hypothesis**: The missingness of `golddiffat15` is independent of the number of `barons` secured.
+
 **Alternative Hypothesis**: The missingness of `golddiffat15` depends on the number of `barons` secured.
 
 After performing the permutation test, I found that the observed statistic for this test is 0.1661, and the p-value is 0.0566. The plot below shows the empirical distribution of the test statistic under the null hypothesis, with the observed statistic marked by the red vertical line.
