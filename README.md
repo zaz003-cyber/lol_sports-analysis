@@ -65,6 +65,9 @@ The head of my cleaned team-level dataset.
 The cleaned dataset shown above retains missing values in some mid-game economic variables (e.g., `golddiffat10`, `golddiffat15`, `goldat15`). These missing values arise from structural differences across leagues and matches, where certain statistics are not recorded or applicable. This dataset represents a general cleaned dataset used for exploration. In later analyses that focus specifically on economic advantages, I further subset the data to include only matches with complete economic information.
 
 ### Univariate Analysis
+
+I performed a univariate analysis of the dragon count statistics in the dataset.
+
 <iframe
   src="assets/dragons_distribution.html"
   width="100%"
