@@ -1,57 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="utf-8">
-
-  <!-- Plotly -->
-  <script src="https://cdn.plot.ly/plotly-2.26.0.min.js"></script>
-
-  <!-- permutation stats -->
-  <script src="../perm_stats_dragon_diff.js"></script>
+  <meta charset="utf-8" />
 </head>
 
 <body>
 
-  <div id="plot" style="width:100%; height:520px;"></div>
+  <script type="text/javascript">
+    window.PlotlyConfig = { MathJaxConfig: 'local' };
+  </script>
 
-  <script>
+  <script charset="utf-8" src="https://cdn.plot.ly/plotly-2.26.0.min.js"></script>
+
+  <script src="../perm_stats_dragon_diff.js"></script>
+
+  <div id="plot" style="height:520px; width:100%;"></div>
+
+  <script type="text/javascript">
     const obs = 3.2475027746947383;
-    const xmin = Math.min(...permStats);
-    const xmax = Math.max(...permStats);
-    const data = [{
+    const trace = {
       type: "histogram",
       x: permStats,
-      nbinsx: 35,
-      marker: {
-        color: "rgba(100, 149, 237, 0.75)"
-      }
-    }];
+      nbinsx: 50,
+      marker: { color: "#636efa" },
+      showlegend: false
+    };
 
     const layout = {
       title: "Permutation Distribution of Difference in Means",
-      xaxis: {
-        title: "Difference in Means",
-        range: [xmin, xmax]
-      },
-      yaxis: {
-        title: "Count"
-      },
-      shapes: [{
-        type: "line",
-        x0: obs,
-        x1: obs,
-        y0: 0,
-        y1: 1,
-        yref: "paper",
-        line: {
-          color: "red",
-          width: 3
+      xaxis: { title: "Difference in Means" },
+      yaxis: { title: "Count" },
+      shapes: [
+        {
+          type: "line",
+          x0: obs,
+          x1: obs,
+          y0: 0,
+          y1: 1,
+          xref: "x",
+          yref: "y domain",
+          line: {
+            color: "red",
+            width: 3
+          }
         }
-      }]
+      ]
     };
 
-    Plotly.newPlot("plot", data, layout);
+    Plotly.newPlot("plot", [trace], layout, { responsive: true });
   </script>
 
+</body>
+</html>
 </body>
 </html>
