@@ -98,3 +98,10 @@ This reflects dragons as a structured and constrained game objective. Extreme va
 </iframe>
 
 1111111
+
+<iframe 
+  src="assets/winrate.html"
+  width="100%" 
+  height="550px"
+  style="border:none;">
+</iframe>
