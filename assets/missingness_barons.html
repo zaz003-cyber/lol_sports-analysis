@@ -1,39 +1,92 @@
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8" />
+  <title>Missingness vs Barons</title>
   <script src="https://cdn.plot.ly/plotly-2.26.0.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: white;
+    }
+    #plot {
+      width: 100%;
+      height: 550px;
+    }
+  </style>
 </head>
 
 <body>
-<div id="plot" style="width:100%;height:520px;"></div>
+  <div id="plot"></div>
 
-<script>
-fetch("perm_stats_ind.json")
-  .then(res => res.json())
-  .then(permStats => {
-    const obs = 0.1661;
+  <script>
+    const OBSERVED_STAT = 0.1661;
+    fetch("perm_stats_ind.json")
+      .then(response => response.json())
+      .then(permStats => {
+        console.log("Loaded perm stats:", permStats);
+        console.log("Is array:", Array.isArray(permStats));
+        console.log("Length:", permStats.length);
+        const data = [{
+          type: "histogram",
+          x: permStats,
+          nbinsx: 50,
+          autobinx: false,
+          marker: {
+            color: "#4c6ef5"
+          },
+          opacity: 0.85
+        }];
 
-    const data = [{
-      type: "histogram",
-      x: permStats,
-      nbinsx: 35
-    }];
-
-    const layout = {
-      title: "Permutation Distribution: Does missingness of golddiffat15 depend on barons?",
-      xaxis: { title: "value" },
-      yaxis: { title: "count" },
-      shapes: [{
-        type: "line",
-        x0: obs, x1: obs,
-        y0: 0, y1: 1,
-        yref: "paper",
-        line: { color: "red", width: 3 }
-      }]
-    };
-
-    Plotly.newPlot("plot", data, layout);
-  });
-</script>
+        // === Layout ===
+        const layout = {
+          title: {
+            text: "Permutation Distribution: Does missingness of golddiffat15 depend on barons?",
+            font: { size: 18 }
+          },
+          xaxis: {
+            title: "value",
+            range: [-0.02, 0.22],
+            zeroline: false
+          },
+          yaxis: {
+            title: "count"
+          },
+          bargap: 0.05,
+          shapes: [
+            {
+              type: "line",
+              x0: OBSERVED_STAT,
+              x1: OBSERVED_STAT,
+              y0: 0,
+              y1: 1,
+              yref: "paper",
+              line: {
+                color: "red",
+                width: 3
+              }
+            }
+          ],
+          annotations: [
+            {
+              x: OBSERVED_STAT,
+              y: 1,
+              yref: "paper",
+              text: "Observed statistic",
+              showarrow: false,
+              xanchor: "left",
+              font: {
+                color: "red"
+              }
+            }
+          ]
+        };
+        Plotly.newPlot("plot", data, layout, { responsive: true });
+      })
+      .catch(error => {
+        console.error("Error loading permutation stats:", error);
+      });
+  </script>
 </body>
 </html>
