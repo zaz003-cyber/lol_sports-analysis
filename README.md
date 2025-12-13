@@ -119,13 +119,13 @@ So if you're a jungler, you need to connect with your team to secure Dragon Soul
 
 ### NMAR Analysis
 
-In my dataset, I analyzed the missingness of the variable `golddiffat15`, which represents the gold difference between teams at the 15-minute mark. Although `golddiffat15` has a significant missingness rate, I did not find strong evidence from permutation tests that its missingness depends on observed variables, such as match outcomes or the number of Baron Nashor kills.
+In my dataset, I analyzed the missingness of the variable `golddiffat15`. Although `golddiffat15` has a significant missingness rate, I did not find strong evidence from permutation tests that its missingness depends on observed variables, such as match outcomes or the number of Baron Nashor kills.
 However, the NMAR mechanism cannot be identified solely from the observed data. The distribution of missing gold values may depend on the unobserved values themselves or on underlying game conditions not recorded in the dataset. For example, matches that end unusually early or games with missing mid-game data are more likely to `golddiffat15`. In such instances, the missing values depend on the underlying game state rather than the observed variables.
 To further assess whether the missingness in `golddiffat15` data constitutes NMAR, additional information is required, such as indicators of game premature termination or data collection interruption. In the absence of such variables, I cannot conclude whether the missingness in `golddiffat15` qualifies as NMAR. Based on the available evidence, its missingness pattern aligns more closely with MCAR or MAR rather than NMAR. Although I clearly considered the possibility of NMAR and discussed what additional information would be needed to evaluate it.
 
 ### Missingness Dependency
 
-I analyzed whether the missingness of the variable `golddiffat15` depends on other observed columns in the dataset. I focused on two variables, `result` and `barons`, as factors potentially underlying the missingness pattern. For both analyses, I used permutation tests with a significance level of 0.05 and selected test statistics designed to capture differences in missingness rates between groups.
+I analyzed whether the missingness of the variable `golddiffat15` depends on other observed columns in the dataset. This column has a non-trivial missing rate of approximately **8.2%**, making it suitable for a missingness dependency analysis. I focused on two variables, `result` and `barons`, as factors potentially underlying the missingness pattern. For both analyses, I used permutation tests with a significance level of 0.05 and selected test statistics designed to capture differences in missingness rates between groups.
 I first tested whether the absence of `golddiffat15` data depended on `result`, then analyzed its correlation with the number of `barons` secured. These tests allowed me to assess whether the absence of `golddiffat15` data was associated with outcomes observed within the game or with objective control factors.
 
 **Null Hypothesis**: The missingness of `golddiffat15` is independent of match `result`.
