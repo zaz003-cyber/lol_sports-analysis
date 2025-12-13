@@ -169,3 +169,10 @@ In this hypothesis test, I am analyzing whether there is a significant differenc
 **Test Statistic**: I use the difference in mean dragon differential between winning and losing teams. This statistic directly measures how many more dragons the winning team averages compared to the losing team.
 
 **Significance Level**: I choose a significance level of α = 0.05.
+
+<iframe 
+  src="assets/hypothesis_dragon.html"
+  width="100%" 
+  height="560px" 
+  style="border:none;">
+</iframe>
