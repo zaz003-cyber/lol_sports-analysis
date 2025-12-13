@@ -1,0 +1,51 @@
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Permutation Distribution of Accuracy Difference</title>
+
+  <script type="text/javascript">
+    window.PlotlyConfig = { MathJaxConfig: 'local' };
+  </script>
+
+  <script charset="utf-8" src="https://cdn.plot.ly/plotly-2.26.0.min.js"></script>
+  <script src="./perm_diffs.js"></script>
+</head>
+
+<body>
+
+  <div id="plot" style="height:520px; width:100%;"></div>
+
+  <script type="text/javascript">
+    const obsDiff = 0.001263097082534581;
+    const trace = {
+      type: "histogram",
+      x: permDiffs,
+      nbinsx: 40,
+      showlegend: false
+    };
+    const layout = {
+      title: "Permutation Distribution of Accuracy Difference",
+      xaxis: { title: "value" },
+      yaxis: { title: "count" },
+      shapes: [
+        {
+          type: "line",
+          x0: obsDiff,
+          x1: obsDiff,
+          y0: 0,
+          y1: 1,
+          xref: "x",
+          yref: "y domain",
+          line: {
+            color: "red",
+            width: 3
+          }
+        }
+      ]
+    };
+
+    Plotly.newPlot("plot", [trace], layout, { responsive: true });
+  </script>
+
+</body>
+</html>
