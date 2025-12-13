@@ -41,6 +41,7 @@ The dataset used in this project contains multivariate game statistics from espo
 - `dragon_diff`: Dragon Control Differential, defined as `dragons` - `opp_dragons`, is used to characterize a team's relative advantage in dragon control and is a key feature in multiple analyses and modeling.
 
 ## Data Cleaning and Exploratory Data Analysis
+
 ### Data Cleaning
 
 To improve the efficiency of subsequent analysis and modeling, this project first filtered the raw dataset, retaining only key variables directly related to match outcomes and mid-game resource control. These include `gameid`, `teamname`, `side`, `result`, `dragons`, `opp_dragons`, `barons`, `towers`, `golddiffat10`, `golddiffat15`, `goldat15`, and `dragon_diff`.
@@ -119,12 +120,39 @@ So if you're a jungler, you need to connect with your team to secure Dragon Soul
 ### NMAR Analysis
 
 In my dataset, I analyzed the missingness of the variable `golddiffat15`, which represents the gold difference between teams at the 15-minute mark. Although `golddiffat15` has a significant missingness rate, I did not find strong evidence from permutation tests that its missingness depends on observed variables, such as match outcomes or the number of Baron Nashor kills.
-However, the NMAR mechanism cannot be identified solely from the observed data. The distribution of missing gold values may depend on the unobserved values themselves or on underlying game conditions not recorded in the dataset. For example, matches that end unusually early or games with missing mid-game data are more likely to have missing gold differences at the 15-minute mark. In such instances, the missing values depend on the underlying game state rather than the observed variables.
+However, the NMAR mechanism cannot be identified solely from the observed data. The distribution of missing gold values may depend on the unobserved values themselves or on underlying game conditions not recorded in the dataset. For example, matches that end unusually early or games with missing mid-game data are more likely to `golddiffat15`. In such instances, the missing values depend on the underlying game state rather than the observed variables.
 To further assess whether the missingness in `golddiffat15` data constitutes NMAR, additional information is required, such as indicators of game premature termination or data collection interruption. In the absence of such variables, I cannot conclude whether the missingness in `golddiffat15` qualifies as NMAR. Based on the available evidence, its missingness pattern aligns more closely with MCAR or MAR rather than NMAR. Although I clearly considered the possibility of NMAR and discussed what additional information would be needed to evaluate it.
 
+### Missingness Dependency
+
+I analyzed whether the missingness of the variable `golddiffat15` depends on other observed columns in the dataset. I focused on two variables, `result` and `barons`, as factors potentially underlying the missingness pattern. For both analyses, I used permutation tests with a significance level of 0.05 and selected test statistics designed to capture differences in missingness rates between groups.
+I first tested whether the absence of `golddiffat15` data depended on `result`, then analyzed its correlation with the number of `barons` secured. These tests allowed me to assess whether the absence of `golddiffat15` data was associated with outcomes observed within the game or with objective control factors.
+
+**Null Hypothesis**: The missingness of `golddiffat15` is independent of match `result`.
+**Alternative Hypothesis**: The missingness of `golddiffat15` depends on match `result`.
+
+After performing the permutation test, I found the observed test statistic to be 0.0000 with a p-value of 1.0000. The graph below shows the empirical distribution of the test statistic under the null hypothesis, with the observed statistic marked by the red vertical line.
+
+<iframe
+  src="assets/missingness_dep_result.html"
+  width="100%"
+  height="550"
+  frameborder="0">
+</iframe>
+
+11111
 
 
+**Null Hypothesis**: The missingness of `golddiffat15` is independent of the number of `barons` secured.
+**Alternative Hypothesis**: The missingness of `golddiffat15` depends on the number of `barons` secured.
 
+In the permutation test for the number of barons, the observed statistic is 0.1661 with a p-value of 0.0660. This shows the observed statistic falls entirely within the null distribution range, meaning the existing evidence is insufficient to conclude whether the missingness of `golddiffat15` depends on the number of barons gained.
 
+<iframe
+  src="assets/missingness_dep_barons.html"
+  width="100%"
+  height="550"
+  frameborder="0">
+</iframe>
 
-
+11111
