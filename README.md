@@ -3,7 +3,7 @@
 
 Author: Zihan Zhang
 
-##Intro:
+## Intro:
 
 This is a DSC80 projectabout League of Legends Dragon Control and Match Outcome Analysis completed at UC San Diego. This project uses professional League of Legends match data to explore the relationship between mid-game key resources—particularly dragon control—and match outcomes.
 
