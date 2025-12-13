@@ -176,7 +176,7 @@ In this hypothesis test, I am analyzing whether there is a significant differenc
   frameborder="0">
 </iframe>
 
-Based on the permutation test, the p-value obtained is extremely small and **close to 0**. Therefore, we reject the null hypothesis at the 5% significance level. This shows dragon control is closely related to match outcomes: winning teams tend to secure more dragons than losing teams.
+Based on the permutation test, the p-value obtained is extremely small and close to **0**. Therefore, we reject the null hypothesis at the 5% significance level. This shows dragon control is closely related to match outcomes: winning teams tend to secure more dragons than losing teams.
 
 ## Framing a Prediction Problem
 
