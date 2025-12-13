@@ -38,16 +38,28 @@ The dataset used in this project contains multivariate game statistics from espo
 
 - `goldat15`: The total gold held by the team at the 15-minute mark, used to help assess mid-game economic status.
 
+- `dragon_diff`: Dragon Control Differential, defined as `dragons` - `opp_dragons`, is used to characterize a team's relative advantage in dragon control and is a key feature in multiple analyses and modeling.
 
+## Data Cleaning and Exploratory Data Analysis
 ### Data Cleaning
 
-To improve the efficiency of subsequent analysis and modeling, this project first filtered the raw dataset, retaining only key variables directly related to match outcomes and mid-game resource control. These include `gameid`, `teamname`, `side`, `result`, `dragons`, `opp_dragons`, `barons`, `towers`, `golddiffat10`, `golddiffat15`, and `goldat15`.
+To improve the efficiency of subsequent analysis and modeling, this project first filtered the raw dataset, retaining only key variables directly related to match outcomes and mid-game resource control. These include `gameid`, `teamname`, `side`, `result`, `dragons`, `opp_dragons`, `barons`, `towers`, `golddiffat10`, `golddiffat15`, `goldat15`, and `dragon_diff`.
 
 The raw data contained statistics at both the player and team levels. To maintain consistent analytical units, this project organized the data into a format where each row reflects the overall performance of a single team across an entire match, using “each team in each match” as the fundamental unit of analysis.
 
 During data cleaning, I found missing values in certain variables related to mid-game resources and economy，e.g., `dragons` and `golddiffat15`. Given the low proportion of missing values and their concentration in a small number of match records, I chose to remove records where critical variables could not be reasonably predicted. Other missing values were handled in a manner consistent with the match structure and variable meaning to protect data completeness and consistency.
 
-In addition, to better capture teams' relative advantages in dragon control, I created the dragon differential variable `dragon_diff`, defined as `dragons` - `opp_dragons`. This variable is used as a core feature in subsequent exploratory data analysis, hypothesis testing, and predictive modeling.
-
 The final dataset, following these data cleaning steps, contains all key variables required for subsequent hypothesis testing and predictive modeling, providing a reliable foundation for further analysis.
 
+The head of my cleaned team-level dataset.
+
+| gameid              | teamname       | side | result | dragons | opp_dragons | barons | towers | golddiffat10 | golddiffat15 | goldat15 | dragon_diff |
+|---------------------|----------------|------|--------|---------|-------------|---------|--------|--------------|--------------|----------|-------------|
+| 11715-11715_game_1  | Oh My God      | Red  | 0      | 1.0     | 4.0         | 0.0     | 4.0    | NaN          | NaN          | NaN      | -3.0        |
+| 11715-11715_game_1  | Weibo Gaming   | Blue | 1      | 4.0     | 1.0         | 1.0     | 10.0   | NaN          | NaN          | NaN      | 3.0         |
+| 11715-11715_game_2  | Oh My God      | Blue | 0      | 2.0     | 2.0         | 0.0     | 1.0    | NaN          | NaN          | NaN      | 0.0         |
+| 11715-11715_game_2  | Weibo Gaming   | Red  | 1      | 2.0     | 2.0         | 1.0     | 11.0   | NaN          | NaN          | NaN      | 0.0         |
+| 11715-11715_game_3  | Oh My God      | Blue | 0      | 3.0     | 0.0         | 0.0     | 3.0    | NaN          | NaN          | NaN      | 3.0         |
+
+*Note:
+The cleaned dataset shown above retains missing values in some mid-game economic variables (e.g., `golddiffat10`, `golddiffat15`, `goldat15`). These missing values arise from structural differences across leagues and matches, where certain statistics are not recorded or applicable. This dataset represents a general cleaned dataset used for exploration. In later analyses that focus specifically on economic advantages, I further subset the data to include only matches with complete economic information.
