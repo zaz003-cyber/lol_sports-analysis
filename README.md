@@ -68,10 +68,10 @@ The cleaned dataset shown above retains missing values in some mid-game economic
 
 I performed a univariate analysis of the dragon count statistics in the dataset.
 
-<iframe
-  src="assets/dragons_distribution.html"
-  width="100%"
-  height="520px"
+<iframe 
+  src="assets/dragons_result.html"
+  width="800" 
+  height="600"
   frameborder="0">
 </iframe>
 
