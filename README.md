@@ -75,11 +75,13 @@ I performed a univariate analysis of the dragon count statistics in the dataset.
   frameborder="0">
 </iframe>
 
-The histogram shows dragon control distribution is skewed and slightly right-biased. Most teams control 1 to 4 dragons, with 2 to 3 dragons being the most common outcome, confirming dragon control is typically shared among multiple teams rather than monopolized by a single one. While controlling zero dragons is uncommon, it still occurs, whereas controlling an extremely high number of dragons (5 or more is extremely rare.
+The histogram shows dragon control distribution is skewed and slightly right-biased. Most teams control 1 to 4 dragons, with 2 to 3 dragons being the most common outcome, confirming dragon control is typically shared among multiple teams rather than monopolized by a single one. While controlling zero dragons is uncommon, it still occurs, whereas maintaining an extremely high number of dragons (5 or more is extremely rare.
 
 This reflects dragons as a structured and constrained game objective. Extreme values occur with low frequency, with most matches falling within a narrow, realistic range of dragon counts. This makes the variable suitable for further comparative and predictive analysis.
 
 ### Bivariate Analysis
+
+At the same time, I also conducted bivariate analysis to examine the relationship between dragon control and match outcomes. I compared dragon-related statistics between winning and losing teams to understand the connection between objective control and competitive results in the game.
 
 <iframe 
   src="assets/dragons_result.html"
@@ -109,4 +111,20 @@ This one shows the difference in dragon control between winning and losing teams
 </iframe>
 
 This bar chart shows a clear positive correlation between the number of dragons secured and the match win rate. Teams securing fewer than two dragons rarely win, while the win rate increases steadily as more dragons are secured. Once a team secures four or more dragons, the probability of victory becomes extremely high.
-So if you're a jungler, you need to connect with your team to secure Dragon Soul. By securing these different Dragon Soul buffs, you can expand your team's advantage and lead them to victory.
+So if you're a jungler, you need to connect with your team to secure Dragon Soul. By ensuring these different Dragon Soul buffs, you can expand your team's advantage and lead them to victory.
+
+
+## Assessment of Missingness
+
+### NMAR Analysis
+
+In my dataset, I analyzed the missingness of the variable `golddiffat15`, which represents the gold difference between teams at the 15-minute mark. Although `golddiffat15` has a significant missingness rate, I did not find strong evidence from permutation tests that its missingness depends on observed variables, such as match outcomes or the number of Baron Nashor kills.
+However, the NMAR mechanism cannot be identified solely from the observed data. The distribution of missing gold values may depend on the unobserved values themselves or on underlying game conditions not recorded in the dataset. For example, matches that end unusually early or games with missing mid-game data are more likely to have missing gold differences at the 15-minute mark. In such instances, the missing values depend on the underlying game state rather than the observed variables.
+To further assess whether the missingness in `golddiffat15` data constitutes NMAR, additional information is required, such as indicators of game premature termination or data collection interruption. In the absence of such variables, I cannot conclude whether the missingness in `golddiffat15` qualifies as NMAR. Based on the available evidence, its missingness pattern aligns more closely with MCAR or MAR rather than NMAR. Although I clearly considered the possibility of NMAR and discussed what additional information would be needed to evaluate it.
+
+
+
+
+
+
+
