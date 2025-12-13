@@ -1,39 +1,35 @@
 <html>
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
   <script src="https://cdn.plot.ly/plotly-2.26.0.min.js"></script>
+  <script src="./perm_stats_result.js"></script>
 </head>
 
 <body>
-<div id="plot" style="width:100%;height:520px;"></div>
-
-<script>
-fetch("perm_stats_dep.json")
-  .then(res => res.json())
-  .then(permStats => {
+  <div id="plot" style="width:100%;height:520px;"></div>
+  <script>
     const obs = 0.0;
-
     const data = [{
       type: "histogram",
       x: permStats,
       nbinsx: 35
     }];
-
     const layout = {
       title: "Permutation Distribution: Does missingness of golddiffat15 depend on result?",
       xaxis: { title: "value" },
       yaxis: { title: "count" },
       shapes: [{
         type: "line",
-        x0: obs, x1: obs,
-        y0: 0, y1: 1,
+        x0: obs,
+        x1: obs,
+        y0: 0,
+        y1: 1,
         yref: "paper",
         line: { color: "red", width: 3 }
       }]
     };
 
     Plotly.newPlot("plot", data, layout);
-  });
-</script>
+  </script>
 </body>
 </html>
