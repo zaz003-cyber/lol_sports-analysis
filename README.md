@@ -53,7 +53,7 @@ The final dataset, following these data cleaning steps, contains all key variabl
 
 The head of my cleaned team-level dataset.
 
-| gameid              | teamname       | side | result | dragons | opp_dragons | barons | towers | golddiffat10 | golddiffat15 | goldat15 | dragon_diff |
+| gameid              | teamname       | side | result | dragons | opp_dragons | barons | towers | golddiffat10 | golddiffat15 | goldat15 | dragon_diff  |
 |---------------------|----------------|------|--------|---------|-------------|---------|--------|--------------|--------------|----------|-------------|
 | 11715-11715_game_1  | Oh My God      | Red  | 0      | 1.0     | 4.0         | 0.0     | 4.0    | NaN          | NaN          | NaN      | -3.0        |
 | 11715-11715_game_1  | Weibo Gaming   | Blue | 1      | 4.0     | 1.0         | 1.0     | 10.0   | NaN          | NaN          | NaN      | 3.0         |
