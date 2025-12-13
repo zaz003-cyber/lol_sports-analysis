@@ -219,9 +219,9 @@ For the baseline model, I built a binary classification model to predict match o
 
 The model uses the following two quantitative features, both of which are observable through 15 minutes into the game:
 
-`dragon_diff`: the dragon differential between the two teams
+- `dragon_diff`: the dragon differential between the two teams
 
-`golddiffat15`: the gold difference between the two teams at 15 minutes
+- `golddiffat15`: the gold difference between the two teams at 15 minutes
 
 Both features are numerical and continuous, so no categorical encoding is required.
 
@@ -253,13 +253,13 @@ In the final model, I optimized the baseline approach through the introduction o
 
 I built the features below:
 
-`dragon_diff`: the difference in dragons secured between the two teams
+- `dragon_diff`: the difference in dragons secured between the two teams
 
-`tower_diff`: a tower differential that reflects structural advantage during the game
+- `tower_diff`: a tower differential that reflects structural advantage during the game
 
-`baron_diff`: the number of barons secured by the team
+- `baron_diff`: the number of barons secured by the team
 
-`objective_diff`: a composite feature combining dragon, tower, and baron differentials
+- `objective_diff`: a composite feature combining dragon, tower, and baron differentials
 
 These features stem from the game's core resource accrual mechanism, where advantages accumulate through objective control and eventually convert into an economic lead.
 The model more accurately reflects a team's overall strength during the mid-game phase. This is done by combining multiple objectives into a single aggregate score.
