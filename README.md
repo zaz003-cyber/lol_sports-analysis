@@ -97,7 +97,7 @@ This box plot compares the distribution of dragon control between winning and lo
   style="border:none;">
 </iframe>
 
-1111111
+This one shows the difference in dragon control between winning and losing teams. Winning teams typically have a positive dragon differential, while losing teams often have a negative one. The disparity between the two distributions shows relative dragon control, rather than absolute quantity, is a key performance indicator.
 
 ### Interesting Aggregates
 
