@@ -108,4 +108,5 @@ This one shows the difference in dragon control between winning and losing teams
   style="border:none;">
 </iframe>
 
-This bar chart shows a clear positive correlation between the number of dragons secured and the match win rate. Teams securing fewer than two dragons rarely win, while the win rate increases steadily as more dragons are secured. Once a team secures four or more dragons, the probability of victory becomes extremely high, showing that dragon control plays a pivotal role in the outcome of matches.
+This bar chart shows a clear positive correlation between the number of dragons secured and the match win rate. Teams securing fewer than two dragons rarely win, while the win rate increases steadily as more dragons are secured. Once a team secures four or more dragons, the probability of victory becomes extremely high.
+So if you're a jungler, you need to connect with your team to secure Dragon Soul. By securing these different Dragon Soul buffs, you can expand your team's advantage and lead them to victory.
