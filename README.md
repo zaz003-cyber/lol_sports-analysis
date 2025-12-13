@@ -111,7 +111,7 @@ This one shows the difference in dragon control between winning and losing teams
 </iframe>
 
 This bar chart shows a clear positive correlation between the number of dragons secured and the match win rate. Teams securing fewer than two dragons rarely win, while the win rate increases steadily as more dragons are secured. Once a team secures four or more dragons, the probability of victory becomes extremely high.
-So if you're a jungler, you need to connect with your team to secure Dragon Soul. By ensuring these different Dragon Soul buffs, you can expand your team's advantage and lead them to victory.
+So if you're a jungler, you need to connect with your team to secure Dragon Soul. Through making sure these different Dragon Soul buffs, you can expand your team's advantage and lead them to victory.
 
 
 ## Assessment of Missingness
@@ -217,7 +217,7 @@ For the baseline model, I built a binary classification model to predict match o
 
 ### Features
 
-The model uses the following two quantitative features, both of which are observable by 15 minutes into the game:
+The model uses the following two quantitative features, both of which are observable through 15 minutes into the game:
 
 `dragon_diff`: the dragon differential between the two teams
 
