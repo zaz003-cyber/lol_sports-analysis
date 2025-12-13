@@ -82,7 +82,7 @@ This reflects dragons as a structured and constrained game objective. Extreme va
 ### Bivariate Analysis
 
 <iframe 
-  src="assets/dragons_resul.html"
+  src="assets/dragons_result.html"
   width="100%" 
   height="550px"
   style="border:none;">
