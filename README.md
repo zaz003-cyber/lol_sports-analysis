@@ -1,6 +1,5 @@
 # Dragon Control and Victory in League of Legends
 
-
 ### Intro
 
 This is a DSC80 project about League of Legends Dragon Control and Match Outcome Analysis completed at UC San Diego. This project uses professional League of Legends match data of 2025 to explore the relationship between mid-game key resources—particularly dragon control—and match outcomes.
