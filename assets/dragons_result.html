@@ -1,0 +1,47 @@
+<html>
+<head>
+  <meta charset="utf-8" />
+  <script src="https://cdn.plot.ly/plotly-2.26.0.min.js"></script>
+</head>
+
+<body>
+  <div id="dragons_by_result" style="width:100%;height:520px;"></div>
+
+  <script>
+    const data = [
+      {
+        type: "box",
+        name: "0",
+        q1: [1],
+        median: [1],
+        q3: [2],
+        lowerfence: [0],
+        upperfence: [3],
+        min: [0],
+        max: [6],
+        boxpoints: false
+      },
+      {
+        type: "box",
+        name: "1",
+        q1: [2],
+        median: [3],
+        q3: [4],
+        lowerfence: [0],
+        upperfence: [7],
+        min: [0],
+        max: [7],
+        boxpoints: false
+      }
+    ];
+
+    const layout = {
+      title: "Dragons Secured by Match Result",
+      xaxis: { title: "result" },
+      yaxis: { title: "dragons" }
+    };
+
+    Plotly.newPlot("dragons_by_result", data, layout);
+  </script>
+</body>
+</html>
