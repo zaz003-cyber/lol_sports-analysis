@@ -1,0 +1,46 @@
+<html>
+<head>
+  <meta charset="utf-8" />
+  <script src="https://cdn.plot.ly/plotly-2.26.0.min.js"></script>
+</head>
+
+<body>
+  <div id="dragon_diff_by_result" style="width:100%;height:520px;"></div>
+
+  <script>
+    const data = [
+      {
+        type: "box",
+        name: "0",
+        q1: [-3],
+        median: [-2],
+        q3: [0],
+        lowerfence: [-7],
+        upperfence: [4],
+        min: [-7],
+        max: [5],
+        boxpoints: false
+      },
+      {
+        type: "box",
+        name: "1",
+        q1: [0],
+        median: [2],
+        q3: [3],
+        lowerfence: [-4],
+        upperfence: [7],
+        min: [-5],
+        max: [7],
+        boxpoints: false
+      }
+    ];
+
+    const layout = {
+      title: "Dragon Differential by Match Result",
+      xaxis: { title: "result" },
+      yaxis: { title: "dragon_diff" }
+    };
+
+    Plotly.newPlot("dragon_diff_by_result", data, layout);
+  </script>
+</body>
