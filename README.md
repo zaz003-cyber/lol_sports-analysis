@@ -134,7 +134,7 @@ I first tested whether the absence of `golddiffat15` data depended on `result`, 
 After performing the permutation test, I found the observed test statistic to be 0.0000 with a p-value of 1.0000. The graph below shows the empirical distribution of the test statistic under the null hypothesis, with the observed statistic marked by the red vertical line.
 
 <iframe
-  src="assets/missingness_dep_result.html"
+  src="assets/missingness_result.html"
   width="100%"
   height="550"
   frameborder="0">
@@ -149,7 +149,7 @@ After performing the permutation test, I found the observed test statistic to be
 After performing the permutation test, I found that the observed statistic for this test is 0.1661, and the p-value is 0.0566. The plot below shows the empirical distribution of the test statistic under the null hypothesis, with the observed statistic marked by the red vertical line.
 
 <iframe
-  src="assets/missingness_dep_barons.html"
+  src="assets/missingness_barons.html"
   width="100%"
   height="550"
   frameborder="0">
