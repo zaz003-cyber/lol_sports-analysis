@@ -80,9 +80,21 @@ The histogram shows that dragon control distribution is skewed and slightly righ
 This reflects dragons as a structured and constrained game objective. Extreme values occur with low frequency, with most matches falling within a narrow, realistic range of dragon counts. This makes the variable suitable for further comparative and predictive analysis.
 
 ### Bivariate Analysis
+
 <iframe 
   src="assets/dragons_resul.html"
   width="100%" 
   height="550px"
   style="border:none;">
 </iframe>
+
+1111111
+
+<iframe 
+  src="assets/dragon_diff_by_result_box.html"
+  width="100%" 
+  height="550px"
+  style="border:none;">
+</iframe>
+
+1111111
