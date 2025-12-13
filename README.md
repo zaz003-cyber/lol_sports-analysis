@@ -75,7 +75,7 @@ I performed a univariate analysis of the dragon count statistics in the dataset.
   frameborder="0">
 </iframe>
 
-The histogram shows that dragon control distribution is skewed and slightly right-biased. Most teams control 1 to 4 dragons, with 2 to 3 dragons being the most common outcome, confirming that dragon control is typically shared among multiple teams rather than monopolized by a single one. While controlling zero dragons is uncommon, it still occurs, whereas controlling an extremely high number of dragons (5 or more is extremely rare.
+The histogram shows dragon control distribution is skewed and slightly right-biased. Most teams control 1 to 4 dragons, with 2 to 3 dragons being the most common outcome, confirming dragon control is typically shared among multiple teams rather than monopolized by a single one. While controlling zero dragons is uncommon, it still occurs, whereas controlling an extremely high number of dragons (5 or more is extremely rare.
 
 This reflects dragons as a structured and constrained game objective. Extreme values occur with low frequency, with most matches falling within a narrow, realistic range of dragon counts. This makes the variable suitable for further comparative and predictive analysis.
 
@@ -88,7 +88,7 @@ This reflects dragons as a structured and constrained game objective. Extreme va
   style="border:none;">
 </iframe>
 
-1111111
+This box plot compares the distribution of dragon control between winning and losing teams. On average, winning teams tend to secure more dragons, with a higher median and greater upper range, while losing teams cluster around lower dragon counts. This shows dragon control is closely linked to match success.
 
 <iframe 
   src="assets/dragon_diff_by_result_box.html"
@@ -99,9 +99,13 @@ This reflects dragons as a structured and constrained game objective. Extreme va
 
 1111111
 
+### Interesting Aggregates
+
 <iframe 
   src="assets/winrate.html"
   width="100%" 
   height="550px"
   style="border:none;">
 </iframe>
+
+This bar chart shows a clear positive correlation between the number of dragons secured and the match win rate. Teams securing fewer than two dragons rarely win, while the win rate increases steadily as more dragons are secured. Once a team secures four or more dragons, the probability of victory becomes extremely high, showing that dragon control plays a pivotal role in the outcome of matches.
