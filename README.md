@@ -78,3 +78,11 @@ I performed a univariate analysis of the dragon count statistics in the dataset.
 The histogram shows that dragon control distribution is skewed and slightly right-biased. Most teams control 1 to 4 dragons, with 2 to 3 dragons being the most common outcome, confirming that dragon control is typically shared among multiple teams rather than monopolized by a single one. While controlling zero dragons is uncommon, it still occurs, whereas controlling an extremely high number of dragons (5 or more is extremely rare.
 
 This reflects dragons as a structured and constrained game objective. Extreme values occur with low frequency, with most matches falling within a narrow, realistic range of dragon counts. This makes the variable suitable for further comparative and predictive analysis.
+
+### Bivariate Analysis
+<iframe 
+  src="assets/dragons_resul.html"
+  width="100%" 
+  height="550px"
+  style="border:none;">
+</iframe>
