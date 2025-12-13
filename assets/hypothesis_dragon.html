@@ -1,1 +1,37 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="https://cdn.plot.ly/plotly-2.26.0.min.js"></script>
+  <script src="./perm_stats_dragon_diff.js"></script>
+</head>
 
+<body>
+  <div id="plot" style="width:100%;height:520px;"></div>
+
+  <script>
+    const obs = 3.2475027746947838;
+    const data = [{
+      type: "histogram",
+      x: permStats,
+      nbinsx: 50
+    }];
+
+    const layout = {
+      title: "Permutation Distribution of Difference in Means",
+      xaxis: { title: "Difference in Means" },
+      yaxis: { title: "Count" },
+      shapes: [{
+        type: "line",
+        x0: obs,
+        x1: obs,
+        y0: 0,
+        y1: 1,
+        yref: "paper",
+        line: { color: "red", width: 3 }
+      }]
+    };
+
+    Plotly.newPlot("plot", data, layout);
+  </script>
+</body>
+</html>
