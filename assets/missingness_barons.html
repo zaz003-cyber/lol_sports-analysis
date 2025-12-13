@@ -9,7 +9,7 @@
   <div id="plot" style="width:100%;height:100%;"></div>
 
   <script>
-    const obs = 0.1661;
+    const obs_ind = 0.1661;
     const data = [{
       type: "histogram",
       x: permStats,
@@ -22,8 +22,8 @@
       yaxis: { title: "count" },
       shapes: [{
         type: "line",
-        x0: obs,
-        x1: obs,
+        x0: obs_ind,
+        x1: obs_ind,
         y0: 0,
         y1: 1,
         yref: "paper",
