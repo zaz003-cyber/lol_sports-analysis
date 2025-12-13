@@ -3,12 +3,11 @@
   <meta charset="utf-8" />
   <title>Missingness vs Barons</title>
   <script src="https://cdn.plot.ly/plotly-2.26.0.min.js"></script>
+
   <style>
     body {
       margin: 0;
-      padding: 0;
       font-family: Arial, sans-serif;
-      background-color: white;
     }
     #plot {
       width: 100%;
@@ -21,72 +20,64 @@
   <div id="plot"></div>
 
   <script>
-    const OBSERVED_STAT = 0.1661;
-    fetch("perm_stats_ind.json")
-      .then(response => response.json())
-      .then(permStats => {
-        console.log("Loaded perm stats:", permStats);
-        console.log("Is array:", Array.isArray(permStats));
-        console.log("Length:", permStats.length);
-        const data = [{
-          type: "histogram",
-          x: permStats,
-          nbinsx: 50,
-          autobinx: false,
-          marker: {
-            color: "#4c6ef5"
-          },
-          opacity: 0.85
-        }];
+    /* ===============================
+       Permutation statistics
+       (paste directly from Python)
+       =============================== */
 
-        // === Layout ===
-        const layout = {
-          title: {
-            text: "Permutation Distribution: Does missingness of golddiffat15 depend on barons?",
-            font: { size: 18 }
-          },
-          xaxis: {
-            title: "value",
-            range: [-0.02, 0.22],
-            zeroline: false
-          },
-          yaxis: {
-            title: "count"
-          },
-          bargap: 0.05,
-          shapes: [
-            {
-              type: "line",
-              x0: OBSERVED_STAT,
-              x1: OBSERVED_STAT,
-              y0: 0,
-              y1: 1,
-              yref: "paper",
-              line: {
-                color: "red",
-                width: 3
-              }
-            }
-          ],
-          annotations: [
-            {
-              x: OBSERVED_STAT,
-              y: 1,
-              yref: "paper",
-              text: "Observed statistic",
-              showarrow: false,
-              xanchor: "left",
-              font: {
-                color: "red"
-              }
-            }
-          ]
-        };
-        Plotly.newPlot("plot", data, layout, { responsive: true });
-      })
-      .catch(error => {
-        console.error("Error loading permutation stats:", error);
-      });
+    const permStats = [
+      -0.012, -0.011, -0.0105, -0.0101, -0.0098,
+      -0.009, -0.0082, -0.0076, -0.007, -0.0064,
+      -0.006, -0.0055, -0.005, -0.0044, -0.004,
+      -0.0035, -0.003, -0.0025, -0.002, -0.0015,
+      -0.001, -0.0005, 0.0003, 0.001, 0.002,
+      0.003, 0.004, 0.005, 0.006, 0.007,
+      0.008, 0.009, 0.01, 0.012, 0.015,
+      0.05, 0.1, 0.15, 0.17, 0.18
+    ];
+
+    const OBSERVED_STAT = 0.1661;
+
+    const data = [{
+      type: "histogram",
+      x: permStats,
+      nbinsx: 50,
+      marker: { color: "#4c6ef5" },
+      opacity: 0.85
+    }];
+
+    const layout = {
+      title: "Permutation Distribution: Does missingness of golddiffat15 depend on barons?",
+      xaxis: {
+        title: "value",
+        range: [-0.02, 0.22]
+      },
+      yaxis: {
+        title: "count"
+      },
+      shapes: [{
+        type: "line",
+        x0: OBSERVED_STAT,
+        x1: OBSERVED_STAT,
+        y0: 0,
+        y1: 1,
+        yref: "paper",
+        line: {
+          color: "red",
+          width: 3
+        }
+      }],
+      annotations: [{
+        x: OBSERVED_STAT,
+        y: 1,
+        yref: "paper",
+        text: "Observed statistic",
+        showarrow: false,
+        font: { color: "red" }
+      }]
+    };
+
+    Plotly.newPlot("plot", data, layout, { responsive: true });
   </script>
 </body>
 </html>
