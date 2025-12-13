@@ -1,25 +1,41 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
+
+  <!-- Plotly -->
   <script src="https://cdn.plot.ly/plotly-2.26.0.min.js"></script>
-  <script src="./perm_stats_dragon_diff.js"></script>
+
+  <!-- permutation stats -->
+  <script src="../perm_stats_dragon_diff.js"></script>
 </head>
 
 <body>
-  <div id="plot" style="width:100%;height:520px;"></div>
+
+  <div id="plot" style="width:100%; height:520px;"></div>
 
   <script>
-    const obs = 3.2475027746947838;
+    const obs = 3.2475027746947383;
+    const xmin = Math.min(...permStats);
+    const xmax = Math.max(...permStats);
     const data = [{
       type: "histogram",
       x: permStats,
-      nbinsx: 35
+      nbinsx: 35,
+      marker: {
+        color: "rgba(100, 149, 237, 0.75)"
+      }
     }];
 
     const layout = {
       title: "Permutation Distribution of Difference in Means",
-      xaxis: { title: "Difference in Means" },
-      yaxis: { title: "Count" },
+      xaxis: {
+        title: "Difference in Means",
+        range: [xmin, xmax]
+      },
+      yaxis: {
+        title: "Count"
+      },
       shapes: [{
         type: "line",
         x0: obs,
@@ -27,11 +43,15 @@
         y0: 0,
         y1: 1,
         yref: "paper",
-        line: { color: "red", width: 3 }
+        line: {
+          color: "red",
+          width: 3
+        }
       }]
     };
 
     Plotly.newPlot("plot", data, layout);
   </script>
+
 </body>
 </html>
