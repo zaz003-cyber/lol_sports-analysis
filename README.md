@@ -72,7 +72,7 @@ I performed a univariate analysis of the dragon count statistics in the dataset.
 <iframe
   src="assets/dragons_distribution.html"
   width="100%"
-  height="520"
+  height="520px"
   frameborder="0">
 </iframe>
 
@@ -86,18 +86,18 @@ At the same time, I also conducted bivariate analysis to examine the relationshi
 
 <iframe 
   src="assets/dragons_result.html"
-  width="100%" 
-  height="550px"
-  style="border:none;">
+  width="800" 
+  height="600"
+  frameborder="0">
 </iframe>
 
 This box plot compares the distribution of dragon control between winning and losing teams. On average, winning teams tend to secure more dragons, with a higher median and greater upper range, while losing teams cluster around lower dragon counts. This shows dragon control is closely linked to match success.
 
 <iframe 
   src="assets/dragon_diff_result.html"
-  width="100%" 
-  height="550px"
-  style="border:none;">
+  width="800" 
+  height="600"
+  frameborder="0">
 </iframe>
 
 This one shows the difference in dragon control between winning and losing teams. Winning teams typically have a positive dragon differential, while losing teams often have a negative one. The disparity between the two distributions shows relative dragon control, rather than absolute quantity, is a key performance indicator.
@@ -106,9 +106,9 @@ This one shows the difference in dragon control between winning and losing teams
 
 <iframe 
   src="assets/winrate.html"
-  width="100%" 
-  height="550px"
-  style="border:none;">
+  width="800" 
+  height="600"
+  frameborder="0">
 </iframe>
 
 This bar chart shows a clear positive correlation between the number of dragons secured and the match win rate. Teams securing fewer than two dragons rarely win, while the win rate increases steadily as more dragons are secured. Once a team secures four or more dragons, the probability of victory becomes extremely high.
@@ -136,8 +136,8 @@ After performing the permutation test, I found the observed test statistic to be
 
 <iframe
   src="assets/missingness_result.html"
-  width="100%"
-  height="550"
+  width="800" 
+  height="600"
   frameborder="0">
 </iframe>
 
@@ -151,8 +151,8 @@ After performing the second permutation test, I found that the observed statisti
 
 <iframe
   src="assets/missingness_barons.html"
-  width="100%"
-  height="550"
+  width="800" 
+  height="600"
   frameborder="0">
 </iframe>
 
@@ -172,9 +172,9 @@ In this hypothesis test, I am analyzing whether there is a significant differenc
 
 <iframe 
   src="assets/hypothesis_dragon.html"
-  width="100%" 
-  height="560px" 
-  style="border:none;">
+  width="800" 
+  height="600"
+  frameborder="0">
 </iframe>
 
 1111
