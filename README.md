@@ -66,8 +66,8 @@ The cleaned dataset shown above retains missing values in some mid-game economic
 
 ### Univariate Analysis
 <iframe
-  src="assets/TotalTeamKills.html"
-  width="800"
-  height="600"
-  frameborder="0"
-></iframe>
+  src="assets/dragons_distribution.html"
+  width="100%"
+  height="520"
+  frameborder="0">
+</iframe>
