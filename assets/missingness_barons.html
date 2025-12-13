@@ -2,10 +2,12 @@
 <head>
   <meta charset="utf-8">
   <script src="https://cdn.plot.ly/plotly-2.26.0.min.js"></script>
-  <script src="./perm_stats_dep.json""</script>
+  <script src="./perm_stats_dep.json"></script>
 </head>
+
 <body>
   <div id="plot" style="width:100%;height:520px;"></div>
+
   <script>
     const obs = 0.1661;
     const data = [{
@@ -13,6 +15,7 @@
       x: permStats,
       nbinsx: 35
     }];
+
     const layout = {
       title: "Permutation Distribution: Does missingness of golddiffat15 depend on barons?",
       xaxis: { title: "value" },
@@ -27,6 +30,7 @@
         line: { color: "red", width: 3 }
       }]
     };
+
     Plotly.newPlot("plot", data, layout);
   </script>
 </body>
