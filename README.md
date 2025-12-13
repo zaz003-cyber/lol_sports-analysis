@@ -289,7 +289,11 @@ In this section, I will analyze how the final model performs differently across 
 
 **Alternative hypothesis**: The model is unfair, that is, there is a difference in accuracy between the two groups. Our test statistic is the difference in accuracy between the two groups.
 
-
-
+<iframe 
+  src="assets/dragons_result.html"
+  width="800" 
+  height="600"
+  frameborder="0">
+</iframe>
 
 After completing the permutation test, I received a p-value greater than 0.05. Thus, we fail to reject the null hypothesis. This shows no strong statistical evidence of a difference in the model's predictive accuracy between teams with and without an opening monetary advantage. Based on this analysis, the model appears to be fair under this grouping standard.
