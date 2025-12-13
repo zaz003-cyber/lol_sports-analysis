@@ -146,7 +146,7 @@ After performing the permutation test, I found the observed test statistic to be
 **Null Hypothesis**: The missingness of `golddiffat15` is independent of the number of `barons` secured.
 **Alternative Hypothesis**: The missingness of `golddiffat15` depends on the number of `barons` secured.
 
-In the permutation test for the number of barons, the observed statistic is 0.1661 with a p-value of 0.0660. This shows the observed statistic falls entirely within the null distribution range, meaning the existing evidence is insufficient to conclude whether the missingness of `golddiffat15` depends on the number of barons gained.
+After performing the permutation test, I found that the observed statistic for this test is 0.1661, and the p-value is 0.0566. The plot below shows the empirical distribution of the test statistic under the null hypothesis, with the observed statistic marked by the red vertical line.
 
 <iframe
   src="assets/missingness_dep_barons.html"
